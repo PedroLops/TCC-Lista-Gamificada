@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (btnAccept2) {
         btnAccept2.addEventListener('click', function() {
-            window.location.href = "../dungeon2/d2q1.html";
+            window.location.href = "dungeon2/d2q1.html";
         });
     }
 
