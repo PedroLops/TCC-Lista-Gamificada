@@ -1,0 +1,111 @@
+/* Importando a fonte para textos futuros */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+
+/* Classes p alternar no JS*/
+.cursor-voltar {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='white'><path d='M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z'/></svg>") 16 16, w-resize;
+}
+.cursor-avancar {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='white'><path d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z'/></svg>") 16 16, e-resize;
+}
+
+.cena {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+
+/* CAMADA 1: O FUNDO DESFOCADO */
+.cena::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* atalho para top, bottom, left, right: 0 */
+    background-image: var(--bg-image); /* Usaremos variável para facilitar */
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px) brightness(0.5);
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 1; /* Camada base */
+}
+
+/* CAMADA 2: A IMAGEM NÍTIDA */
+.cena::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2; /* Fica por cima do blur */
+}
+
+.proporcao-imagem {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: calc(100vh * (1440 / 810)); /* Limita a largura pela altura da tela */
+    max-height: calc(100vw * (810 / 1440)); /* Limita a altura pela largura da tela */
+    aspect-ratio: 1440 / 810;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+/* CAMADA 3: CONTEÚDO (Texto, Botões) */
+.cena > * {
+    position: relative;
+    z-index: 3; /* Garante que botões fiquem acima de tudo */
+}
+
+/* Estilo para textos que você queira adicionar depois */
+.dialogo-texto {
+    position: absolute;
+    bottom: 50px;
+    width: 80%;
+    text-align: center;
+    font-family: 'Jersey 10', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    pointer-events: none; /* Garante que o texto não bloqueie o clique na imagem */
+}
+
+/* O Botão Invisível */
+.botao-interativo-invisivel {
+    display: none;
+    position: absolute;
+    
+    /* Use porcentagem para o tamanho e posição */
+    width: 32.5%;  /* Exemplo: 30% da largura da imagem */
+    height: 20%; /* Exemplo: 20% da altura da imagem */
+    
+    /* Posicione usando top/left em % para fixar no objeto da imagem */
+    top: 30%; 
+    left: 40%;
+    
+    background: transparent;
+    border: 2px solid rgba(92, 184, 92, 0.5); /* Borda suave para teste */
+    cursor: pointer;
+}
+
+.botao-interativo-invisivel:hover {
+    box-shadow: 0 0 80px #ffc670;
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Jersey 10', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.feedback-container {
+    width: 1200px;
+    margin-bottom: 20px;
+}
+
+.feedback-container h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ff6060;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.feedback-container p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+
+/* Banner de Recompensas (1200px total) */
+.banner-resultado-wrapper {
+    display: flex;
+    width: 1200px;
+    height: 320px;
+    margin-bottom: 30px;
+}
+
+.banner-imagem-container {
+    width: 1024px;
+    height: 320px;
+    background-image: url('../img/BG-falha-questao.png'); /* Substitua pelo seu caminho */
+    background-size: cover;
+    background-position: center;
+}
+
+.recompensas-container {
+    width: 170px;
+    height: 320px;
+    background-color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+
+.recompensas-container span {
+    font-size: 2rem;
+}
+
+.xp { color: #5bc0de; }
+.gold { color: #ff6060; }
+
+/* Banner do Mapa */
+.banner-mapa-resultado {
+    width: 1200px;
+}
+
+.banner-mapa-resultado p {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.mapa-flex-container {
+    display: flex;
+    width: 1200px;
+    height: 137px;
+}
+
+.mapa-img-box {
+    width: 1024px;
+    height: 137px;
+}
+
+.map-image-resultado {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-proxima {
+    width: 170px; 
+    height: 137px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    font-family: 'Jersey 10', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.btn-proxima:hover {
+    background-color: #4cae4c;
+    filter: brightness(1.2);
+}

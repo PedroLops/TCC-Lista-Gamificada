@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin: 0;
+}
+
+h2{
+    font-family: "Jersey 10", serif;
+    font-size: 60px; 
+    letter-spacing: 5px 
+}
+
+/* Seção do Cabeçalho da Questão */
+.question-header {
+    width: 1200px;
+    margin-bottom: 30px;
+}
+.question-header h2 { color: #ffd700; margin-bottom: 5px; }
+.text-bold { font-weight: bold; font-size: 1.2rem; margin-bottom: 5px; }
+.text-normal { font-weight: normal; color: #ccc; }
+
+/* Banner de Batalha */
+.banner-batalha {
+    width: 1200px;
+    height: 400px;
+    background-image: url('../img/bg-dungeon2-questao.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around; /* Espaça os alvos igualmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-bottom: 40px;
+}
+
+.alvos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaço entre botão e imagem */
+    margin-top: 150px;
+}
+
+.alvos img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+.btn-attack {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-attack:hover { background-color: #c9302c; transform: scale(1.1); }
+
+/* Banner de Mapa */
+.banner-mapa {
+    width: 1200px;
+}
+.banner-mapa p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.map-image {
+    width: 1200px;
+    height: 200px;
+    object-fit: cover;
+}
