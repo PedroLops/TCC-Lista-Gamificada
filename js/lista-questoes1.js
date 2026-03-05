@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verificamos se o botão realmente existe para evitar novos erros
     if (btnAccept1) {
         btnAccept1.addEventListener('click', function() {
-            window.location.href = "../dungeon1/d1q1.html";
+            window.location.href = "dungeon1/d1q1.html";
         });
     }
 
